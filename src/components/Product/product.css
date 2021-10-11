@@ -1,0 +1,16 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    padding: 20px;
+}
+.product-name{
+    color: blue;
+    font-weight: 450;
+}
+.product-Details{
+    padding-left: 5px;
+}
+.description{
+    display: flex;
+}
