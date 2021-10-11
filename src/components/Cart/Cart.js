@@ -48,7 +48,7 @@ const Cart = (props) => {
                 </tr>
             </table>
             <a href="/review">
-                <button className='review-order'><span>Review your order</span></button>
+                <button className='btn btn-primary'><span>Review your order</span></button>
             </a>
         </div>
     );
