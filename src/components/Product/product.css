@@ -5,12 +5,25 @@
     padding: 20px;
 }
 .product-name{
+    text-align: left;
     color: blue;
-    font-weight: 450;
+    font-weight: 400;
 }
 .product-Details{
     padding-left: 5px;
 }
 .description{
     display: flex;
+}
+.add-cart{
+    background-color: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    width: 200px;
+    height: 26px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+    vertical-align: middle;
 }
