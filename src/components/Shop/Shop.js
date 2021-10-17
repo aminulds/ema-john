@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import fakeData from "../../fakeData";
+import React, { useEffect, useState } from "react";
+import fakeData from "../../fakeData/products.json";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./shop.css";
@@ -7,6 +7,7 @@ import "./shop.css";
 const Shop = () => {
   const first20 = fakeData.slice(0, 5);
   const [products, setProducts] = useState(first20);
+  useEffect(() => setProducts(fakeData), []);
   //Handle Add Product
   const [cart, setCart] = useState([]);
 
@@ -19,6 +20,7 @@ const Shop = () => {
           <Product
             handleAddProduct={handleAddProduct}
             productDetails={product}
+            key={product.key}
           ></Product>
         ))}
       </div>
