@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import fakeData from "../../fakeData/products.json";
+import { addToDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./shop.css";
@@ -11,13 +12,18 @@ const Shop = () => {
   //Handle Add Product
   const [cart, setCart] = useState([]);
 
-  const handleAddProduct = (product) => setCart([...cart, product]);
+  const handleAddProduct = (product) => {
+    setCart([...cart, product]);
+    addToDb(product.key);
+  };
 
   return (
     <div className="shop-container">
       <div className="product-container">
+        <h3 className="text-center">Shop</h3>
         {products.map((product) => (
           <Product
+            showAddToCart={true}
             handleAddProduct={handleAddProduct}
             productDetails={product}
             key={product.key}
